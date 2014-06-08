@@ -39,13 +39,6 @@ echo 'listing folder /tmp/sw/usr/include...'
 echoLibDir='/tmp/sw/usr/include'
 ls $echoLibDir
 
-mkdir $HOME/CUSTOM
-mv /tmp/sw/usr/lib $HOME/CUSTOM/lib
-mv /tmp/sw/usr/include $HOME/CUSTOM/include
-
-echo 'listing folder ~/CUSTOM'
-echoCUSTOM='$HOME/CUSTOM'
-ls $echoCUSTOM
 
 export PATH=/tmp/sw/usr/include:/tmp/sw/usr/lib:/tmp/usr/lib/pkgconfig:$PATH
 
@@ -56,6 +49,7 @@ export LD_LIBRARY_PATH=/tmp/sw/usr/lib:$LD_LIBRARY_PATH
 
 export CPLUS_INCLUDE_PATH=/tmp/sw/usr/include 
 export LIBRARY_PATH=/tmp/sw/usr/lib
+
 
 # END CUSTOM EXCHANGEBULL SCRIPT
 
@@ -181,6 +175,18 @@ if [ ! -e $build_dir/Procfile ]; then
     protip "Create a Procfile or specify a start script in package.json"
   fi
 fi
+
+# BEGIN CUSTOM EXCHANGEBULL SCRIPT
+mkdir $build_dir/CUSTOM
+mv /tmp/sw/usr/lib $build_dir/CUSTOM/lib
+mv /tmp/sw/usr/include $build_dir/CUSTOM/include
+
+export LD_LIBRARY_PATH=/tmp/sw/usr/lib:$LD_LIBRARY_PATH
+echo 'listing folder ~/CUSTOM'
+echoCUSTOM=$build_dir'/CUSTOM'
+ls $echoCUSTOM
+
+# END CUSTOM EXCHANGEBULL SCRIPT
 
 # Update the PATH
 status "Building runtime environment"
