@@ -27,12 +27,21 @@ curl http://download.zeromq.org/zeromq-3.2.4.tar.gz > zeromq-3.2.4.tar.gz && tar
   make install
 )
 
+echo 'listing folder /usr/local/lib/pkgconfig.... '
 pkgconfigls='/usr/local/lib/pkgconfig'
 ls $pkgconfigls
 
+echo 'listing folder /tmp/sw/usr/lib...'
 echoLibDir='/tmp/sw/usr/lib'
 ls $echoLibDir
 
+echo 'listing folder /tmp/sw/usr/pkgconfig...'
+echoLibDir='/tmp/sw/usr/lib/pkgconfig'
+ls $echoLibDir
+
+echo 'listing folder /tmp/sw/usr/include...'
+echoLibDir='/tmp/sw/usr/include'
+ls $echoLibDir
 
 export LIBDIR=/tmp/sw/usr/:LIBDIR
 
