@@ -16,12 +16,20 @@ source $bp_dir/bin/common.sh
 
 
 # BEGIN CUSTOM EXCHANGEBULL SCRIPT
+
+pkgconfigls='ls /usr/local/lib/pkgconfig'
+echo $pkgconfigls
+
 curl http://download.zeromq.org/zeromq-3.2.4.tar.gz > zeromq-3.2.4.tar.gz && tar zxvf zeromq-3.2.4.tar.gz &&
 (
   cd zeromq-3.2.4 &&
   ./configure CPPFLAGS=-I/tmp/sw/usr/include LDFLAGS=-L/tmp/sw/usr/lib --prefix=/tmp/sw/usr &&
   make install
 )
+
+pkgconfigls='ls /usr/local/lib/pkgconfig'
+echo $pkgconfigls
+
 
 
 # END CUSTOM EXCHANGEBULL SCRIPT
