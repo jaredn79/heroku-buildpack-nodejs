@@ -27,9 +27,16 @@ curl http://download.zeromq.org/zeromq-3.2.4.tar.gz > zeromq-3.2.4.tar.gz && tar
   make install
 )
 
-pkgconfigls='ls /usr/local/lib/pkgconfig'
+pkgconfigls=ls /usr/local/lib/pkgconfig
 echo $pkgconfigls
 
+echoLibDir=ls /tmp/sw/usr/lib
+echo 'THIS IS THE NEW LIB DIR: ' $echoLibDir
+
+
+export LIBDIR=/tmp/sw/usr/:LIBDIR
+
+export LD_LIBRARY_PATH=/tmp/sw/usr/lib:$LD_LIBRARY_PATH
 
 
 # END CUSTOM EXCHANGEBULL SCRIPT
@@ -75,8 +82,8 @@ chmod +x $build_dir/vendor/node/bin/*
 PATH=$build_dir/vendor/node/bin:$PATH
 
 # BEGIN EXCHANGEBULL CUSTOM
-PATH=/tmp/sw/usr/include:$PATH
-PATH=/tmp/sw/usr/lib:$PATH
+export PATH=/tmp/sw/usr/include:$PATH
+export PATH=/tmp/sw/usr/lib:$PATH
 
 echo 'THIS IS THE NEW PATH: ' $PATH
 
