@@ -44,7 +44,7 @@ mv /tmp/sw/usr/lib ~/CUSTOM/lib
 mv /tmp/sw/usr/include ~/CUSTOM/include
 
 echo 'listing folder ~/CUSTOM'
-echoCUSTOM = '~/CUSTOM'
+echoCUSTOM='~/CUSTOM'
 ls $echoCUSTOM
 
 export PATH=/tmp/sw/usr/include:/tmp/sw/usr/lib:/tmp/usr/lib/pkgconfig:$PATH
