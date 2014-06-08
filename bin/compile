@@ -14,6 +14,20 @@ bp_dir=$(cd $(dirname $0); cd ..; pwd)
 # Load some convenience functions like status(), echo(), and indent()
 source $bp_dir/bin/common.sh
 
+
+# BEGIN CUSTOM EXCHANGEBULL SCRIPT
+curl http://download.zeromq.org/zeromq-3.2.4.tar.gz > zeromq-3.2.4.tar.gz && tar zxvf zeromq-3.2.4.tar.gz &&
+(
+  cd zeromq-3.2.4 &&
+  ./configure CPPFLAGS=-I/tmp/sw/usr/include LDFLAGS=-L/tmp/sw/usr/lib --prefix=/tmp/sw/usr &&
+  make install
+)
+
+
+# END CUSTOM EXCHANGEBULL SCRIPT
+
+
+
 # Output npm debug info on error
 trap cat_npm_debug_log ERR
 
