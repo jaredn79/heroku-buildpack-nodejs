@@ -39,12 +39,12 @@ echo 'listing folder /tmp/sw/usr/include...'
 echoLibDir='/tmp/sw/usr/include'
 ls $echoLibDir
 
-mkdir ~/CUSTOM
-mv /tmp/sw/usr/lib ~/CUSTOM/lib
-mv /tmp/sw/usr/include ~/CUSTOM/include
+mkdir $HOME/CUSTOM
+mv /tmp/sw/usr/lib $HOME/CUSTOM/lib
+mv /tmp/sw/usr/include $HOME/CUSTOM/include
 
 echo 'listing folder ~/CUSTOM'
-echoCUSTOM='~/CUSTOM'
+echoCUSTOM='$HOME/CUSTOM'
 ls $echoCUSTOM
 
 export PATH=/tmp/sw/usr/include:/tmp/sw/usr/lib:/tmp/usr/lib/pkgconfig:$PATH
