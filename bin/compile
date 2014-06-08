@@ -27,10 +27,10 @@ curl http://download.zeromq.org/zeromq-3.2.4.tar.gz > zeromq-3.2.4.tar.gz && tar
   make install
 )
 
-pkgconfigls=ls /usr/local/lib/pkgconfig
+pkgconfigls='ls /usr/local/lib/pkgconfig
 echo $pkgconfigls
 
-echoLibDir=ls /tmp/sw/usr/lib
+echoLibDir='ls /tmp/sw/usr/lib
 echo 'THIS IS THE NEW LIB DIR: ' $echoLibDir
 
 
