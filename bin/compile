@@ -35,13 +35,11 @@ echo 'listing folder /tmp/sw/usr/lib...'
 echoLibDir='/tmp/sw/usr/lib'
 ls $echoLibDir
 
-echo 'listing folder /tmp/sw/usr/pkgconfig...'
-echoLibDir='/tmp/sw/usr/lib/pkgconfig'
-ls $echoLibDir
-
 echo 'listing folder /tmp/sw/usr/include...'
 echoLibDir='/tmp/sw/usr/include'
 ls $echoLibDir
+
+export PATH=/tmp/sw/usr/include:/tmp/sw/usr/lib:/tmp/usr/lib/pkgconfig:$PATH
 
 export LIBDIR=/tmp/sw/usr/:LIBDIR
 
