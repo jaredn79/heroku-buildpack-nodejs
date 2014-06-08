@@ -77,6 +77,9 @@ PATH=$build_dir/vendor/node/bin:$PATH
 # BEGIN EXCHANGEBULL CUSTOM
 PATH=/tmp/sw/usr/include:$PATH
 PATH=/tmp/sw/usr/lib:$PATH
+
+echo 'THIS IS THE NEW PATH: ' $PATH
+
 # END EXCHANGEBULL CUSTOM
 
 # Run subsequent node/npm commands from the build path
