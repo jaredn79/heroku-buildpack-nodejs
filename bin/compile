@@ -46,6 +46,9 @@ export LIBDIR=/tmp/sw/usr/:LIBDIR
 export LD_LIBRARY_PATH=/tmp/sw/usr/lib:$LD_LIBRARY_PATH
 
 
+export CPLUS_INCLUDE_PATH=/tmp/sw/usr/include 
+export LIBRARY_PATH=/tmp/sw/usr/lib
+
 # END CUSTOM EXCHANGEBULL SCRIPT
 
 
